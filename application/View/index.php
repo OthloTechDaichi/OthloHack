@@ -48,11 +48,11 @@
             </div>
             <div class="modal-body" id="cat-body">
               <div class="row">
-                  <div data-toggle="modal" data-target="#soji-list" data-dismiss="modal" id="cat-soji" class="btn col-6">掃除</div>
-                  <div data-toggle="modal" data-target="#sentaku-list" data-dismiss="modal" id="cat-sentaku" class="btn col-6">洗濯</div>
-                  <div data-toggle="modal" data-target="#buy-list" data-dismiss="modal" id="cat-buy" class="btn col-6">買い物</div>
-                  <div data-toggle="modal" data-target="#other-list" data-dismiss="modal" id="cat-other" class="btn col-6">その他</div>
-                </div>
+                  <div data-toggle="modal" data-target="#soji-list" data-dismiss="modal" id="cat-soji" class="btn col-5 cat">掃除</div>
+                  <div data-toggle="modal" data-target="#sentaku-list" data-dismiss="modal" id="cat-sentaku" class="btn col-5 cat">洗濯</div>
+                  <div data-toggle="modal" data-target="#buy-list" data-dismiss="modal" id="cat-buy" class="btn col-5 cat">買い物</div>
+                  <div data-toggle="modal" data-target="#other-list" data-dismiss="modal" id="cat-other" class="btn col-5 cat">その他</div>
+              </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn" data-dismiss="modal">キャンセル</button>
