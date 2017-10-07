@@ -16,7 +16,7 @@
 </head>
 <body>
 
-<a class="brand" href="#">大地</a>
+<a class="brand" href="#">DAICHI</a>
 
 <div class="container">
 
@@ -47,10 +47,12 @@
                 </button>
             </div>
             <div class="modal-body" id="cat-body">
-                <div data-toggle="modal" data-target="#soji-list" data-dismiss="modal" id="cat-soji">掃除</div>
-                <div data-toggle="modal" data-target="#sentaku-list" data-dismiss="modal" id="cat-sentaku">洗濯</div>
-                <div data-toggle="modal" data-target="#buy-list" data-dismiss="modal" id="cat-buy">買い物</div>
-                <div data-toggle="modal" data-target="#other-list" data-dismiss="modal" id="cat-other">その他</div>
+              <div class="row">
+                  <div data-toggle="modal" data-target="#soji-list" data-dismiss="modal" id="cat-soji" class="btn col-6">掃除</div>
+                  <div data-toggle="modal" data-target="#sentaku-list" data-dismiss="modal" id="cat-sentaku" class="btn col-6">洗濯</div>
+                  <div data-toggle="modal" data-target="#buy-list" data-dismiss="modal" id="cat-buy" class="btn col-6">買い物</div>
+                  <div data-toggle="modal" data-target="#other-list" data-dismiss="modal" id="cat-other" class="btn col-6">その他</div>
+                </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn" data-dismiss="modal">キャンセル</button>
