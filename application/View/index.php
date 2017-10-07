@@ -183,5 +183,21 @@
         integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
         crossorigin="anonymous"></script>
 <script src="js/index.js"></script>
+
+<?php
+$db=new SQLite3('../../db/othlotest.db');
+
+$sql_result=$db->query("SELECT * FROM my_task_list");
+
+while( $data = $sql_result->fetchArray() )  {
+
+    print $data["id"]." : ".$data["category_id"]." : ".$data["sub_category_id"]." : ".$data["date_time"]." : ".$data["done"]."</br>";
+
+}
+
+$db->close();
+?>
+
+
 </body>
 </html>
