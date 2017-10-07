@@ -31,6 +31,23 @@
     <!-- addedはタスクリストのcssのためのクラス -->
     <div class="list added">
       <ul id="index-task" class="task-list">
+
+        <?php
+        $db=new SQLite3('../../db/daich.db');
+        $sql_result=$db->query("SELECT * FROM my_task_list");
+        while( $data = $sql_result->fetchArray() )  {
+            if($data["done"] == 0) {
+              $sub_category_name = $db->query("SELECT * FROM sub_category WHERE id =".$data["sub_category_id"]." AND"." category_id =".$data["category_id"])->fetchArray();
+              echo '<li class="task-item" data-id="0">
+                      <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input">'
+                        .$sub_category_name["name"].
+                      '</label>
+                    </li>';
+            }
+        }
+        $db->close();
+        ?>
       </ul>
     </div>
 
@@ -74,11 +91,11 @@
             </div>
             <div class="modal-body">
                 <ul class="list-group">
-                    <li class="list-group-item">掃除</li>
-                    <li class="list-group-item">Dapibus ac facilisis in</li>
-                    <li class="list-group-item">Morbi leo risus</li>
-                    <li class="list-group-item">Porta ac consectetur ac</li>
-                    <li class="list-group-item">Vestibulum at eros</li>
+                    <li id="1"class="list-group-item">掃除</li>
+                    <li id="2"class="list-group-item">\Dapibus ac facilisis in</li>
+                    <li id="3"class="list-group-item">Morbi leo risus</li>
+                    <li id="4"class="list-group-item">Porta ac consectetur ac</li>
+                    <li id="5"class="list-group-item">Vestibulum at eros</li>
                 </ul>
                 <div class="form-group">
                     <input type="text" name="" class="new-item" />
@@ -106,11 +123,11 @@
             </div>
             <div class="modal-body">
                 <ul class="list-group">
-                    <li class="list-group-item">洗濯</li>
-                    <li class="list-group-item">Dapibus ac facilisis in</li>
-                    <li class="list-group-item">Morbi leo risus</li>
-                    <li class="list-group-item">Porta ac consectetur ac</li>
-                    <li class="list-group-item">Vestibulum at eros</li>
+                    <li id="1" class="list-group-item">洗濯</li>
+                    <li id="2" class="list-group-item">Dapibus ac facilisis in</li>
+                    <li id="3" class="list-group-item">Morbi leo risus</li>
+                    <li id="4" class="list-group-item">Porta ac consectetur ac</li>
+                    <li id="5" class="list-group-item">Vestibulum at eros</li>
                 </ul>
             </div>
             <div class="modal-footer">
@@ -135,11 +152,11 @@
             </div>
             <div class="modal-body">
                 <ul class="list-group">
-                    <li class="list-group-item">買い物</li>
-                    <li class="list-group-item">Dapibus ac facilisis in</li>
-                    <li class="list-group-item">Morbi leo risus</li>
-                    <li class="list-group-item">Porta ac consectetur ac</li>
-                    <li class="list-group-item">Vestibulum at eros</li>
+                    <li id="1" class="list-group-item">買い物</li>
+                    <li id="2" class="list-group-item">Dapibus ac facilisis in</li>
+                    <li id="3" class="list-group-item">Morbi leo risus</li>
+                    <li id="4" class="list-group-item">Porta ac consectetur ac</li>
+                    <li id="5" class="list-group-item">Vestibulum at eros</li>
                 </ul>
             </div>
             <div class="modal-footer">
@@ -164,11 +181,11 @@
             </div>
             <div class="modal-body">
                 <ul class="list-group">
-                    <li class="list-group-item">その他</li>
-                    <li class="list-group-item">Dapibus ac facilisis in</li>
-                    <li class="list-group-item">Morbi leo risus</li>
-                    <li class="list-group-item">Porta ac consectetur ac</li>
-                    <li class="list-group-item">Vestibulum at eros</li>
+                    <li id="1" class="list-group-item">その他</li>
+                    <li id="2" class="list-group-item">Dapibus ac facilisis in</li>
+                    <li id="3" class="list-group-item">Morbi leo risus</li>
+                    <li id="4" class="list-group-item">Porta ac consectetur ac</li>
+                    <li id="5" class="list-group-item">Vestibulum at eros</li>
                 </ul>
             </div>
             <div class="modal-footer">
@@ -195,22 +212,9 @@
         crossorigin="anonymous"></script>
 <script src="js/index.js"></script>
 
-<?php
-$db=new SQLite3('../../db/othlotest.db');
 
-$sql_result=$db->query("SELECT * FROM my_task_list");
 
-while( $data = $sql_result->fetchArray() )  {
-
-    if($data["done"] == "0") {
-        print $data["id"] . " : " . $data["category_id"] . " : " . $data["sub_category_id"] . " : " . $data["date_time"] . " : " . $data["done"] . "</br>";
-    }
-}
-
-$db->close();
-?>
-
-<?php
+<!-- <?php
 if(isset($_POST['add'])) {
     date_default_timezone_set('Asia/Tokyo');
     $db = new SQLite3('../../db/othlotest.db');
@@ -226,7 +230,7 @@ if(isset($_POST['add'])) {
 
 <form action="index.php" method="post">
     <input type="submit" name="add" value="追加" />
-</form>
+</form> -->
 
 
 </body>

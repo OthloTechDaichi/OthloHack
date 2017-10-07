@@ -20,6 +20,11 @@ function createLI(val)
     return li;
 }
 
+function insertTaskToDB(val){
+  const category_id = val.target.parentElement.id;
+  console.log(val.target.id)
+}
+
 function add(val) {
     $("#index-task").append(createLI(val));
 }
@@ -37,6 +42,7 @@ $("#sentaku-list .list-group-item,#soji-list .list-group-item,#buy-list .list-gr
             "method": "POST",
             body:form
         });
+        insertTaskToDB(e);
         add(e.target.textContent);
 
         $(e.target.parentNode.parentNode.parentNode.parentNode.parentNode).modal("hide");

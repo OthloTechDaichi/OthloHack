@@ -5,7 +5,7 @@ CREATE TABLE IF NOT EXISTS my_task_list(
   category_id INTEGER NOT NULL,
   sub_category_id INTEGER NOT NULL,
   date_time TEXT NOT NULL,
-  done BLOB NOT NULL,
+  done INTEGER NOT NULL,
   foreign key (category_id) references category(id),
   foreign key (sub_category_id) references sub_category(id)
 );
