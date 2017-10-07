@@ -10,15 +10,13 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
           integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="../../css/base.css"/>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 </head>
 <body>
 
-<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-    <a class="navbar-brand" href="#">大地</a>
-</nav>
+<a class="navbar-brand" href="#">大地</a>
 
 <div class="container">
 
@@ -27,9 +25,7 @@
     </div>
 
     <div class="list">
-        <button class="btn btn-primary" data-toggle="modal" data-target="#catlist">
-            +
-        </button>
+        <button class="btn" data-toggle="modal" data-target="#catlist">+</button>
         <ul id="index-task" class="task-list">
         </ul>
     </div>
@@ -39,7 +35,6 @@
 
 <div class="modal" id="catlist" tabindex="-1">
     <div class="modal-dialog">
-
         <div class="modal-content">
             <div class="modal-header">
                 <h4 class="modal-title" id="modal-label">タスク追加</h4>
@@ -54,7 +49,7 @@
                 <div data-toggle="modal" data-target="#other-list" data-dismiss="modal" id="cat-other">その他</div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">キャンセル</button>
+                <button type="button" class="btn" data-dismiss="modal">キャンセル</button>
             </div>
         </div>
     </div>
@@ -81,10 +76,8 @@
                 </ul>
             </div>
             <div class="modal-footer">
-                <button type="button" data-toggle="modal" data-target="#catlist" class="btn btn-default"
-                        data-dismiss="modal">戻る
-                </button>
-                <button type="button" class="btn btn-primary" data-dismiss="modal">キャンセル</button>
+                <button type="button" data-toggle="modal" data-target="#catlist" class="btn" data-dismiss="modal">戻る</button>
+                <button type="button" class="btn" data-dismiss="modal">キャンセル</button>
             </div>
         </div>
     </div>
@@ -110,10 +103,10 @@
                 </ul>
             </div>
             <div class="modal-footer">
-                <button type="button" data-toggle="modal" data-target="#catlist" class="btn btn-default"
+                <button type="button" data-toggle="modal" data-target="#catlist" class="btn"
                         data-dismiss="modal">戻る
                 </button>
-                <button type="button" class="btn btn-primary" data-dismiss="modal">キャンセル</button>
+                <button type="button" class="btn" data-dismiss="modal">キャンセル</button>
             </div>
         </div>
     </div>
@@ -139,7 +132,7 @@
                 </ul>
             </div>
             <div class="modal-footer">
-                <button type="button" data-toggle="modal" data-target="#catlist" class="btn btn-default"
+                <button type="button" data-toggle="modal" data-target="#catlist" class="btn"
                         data-dismiss="modal">戻る
                 </button>
                 <button type="button" class="btn btn-primary" data-dismiss="modal">キャンセル</button>
@@ -168,10 +161,10 @@
                 </ul>
             </div>
             <div class="modal-footer">
-                <button type="button" data-toggle="modal" data-target="#catlist" class="btn btn-default"
+                <button type="button" data-toggle="modal" data-target="#catlist" class="btn"
                         data-dismiss="modal">戻る
                 </button>
-                <button type="button" class="btn btn-default" data-dismiss="modal">キャンセル</button>
+                <button type="button" class="btn" data-dismiss="modal">キャンセル</button>
             </div>
         </div>
     </div>
