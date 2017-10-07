@@ -16,18 +16,22 @@
 </head>
 <body>
 
-<a class="navbar-brand" href="#">大地</a>
+<a class="brand" href="#">大地</a>
 
 <div class="container">
 
     <div id="level">
-        Level.1
+        Lv.1
     </div>
-
+    <!-- タスクの追加 -->
     <div class="list">
         <button class="btn" data-toggle="modal" data-target="#catlist">+</button>
-        <ul id="index-task" class="task-list">
-        </ul>
+    </div>
+    <!-- タスクが追加されたらここに表示 -->
+    <!-- addedはタスクリストのcssのためのクラス -->
+    <div class="list added">
+      <ul id="index-task" class="task-list">
+      </ul>
     </div>
 
 </div><!-- /.container -->
@@ -135,7 +139,7 @@
                 <button type="button" data-toggle="modal" data-target="#catlist" class="btn"
                         data-dismiss="modal">戻る
                 </button>
-                <button type="button" class="btn btn-primary" data-dismiss="modal">キャンセル</button>
+                <button type="button" class="btn" data-dismiss="modal">キャンセル</button>
             </div>
         </div>
     </div>
