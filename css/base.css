@@ -2,8 +2,16 @@ html, body {
   background-color: #f7f3e8;
   color: #3c3c3c;
 }
+ul{
+  padding-left: 0;
+}
+ul li{
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
 .row{
-  margin: 2em auto;
+  margin: 2em 0;
 }
 html .btn, body .btn {
     background-color: #ff9933;
@@ -20,4 +28,31 @@ html .btn:active, body .btn:active {
     text-decoration: none;
     border-bottom: none;
     margin-top: 0.2em;
+}
+.added{
+  width: 80%;
+  margin: 2em auto 0;
+  background-color: #FBFBFB;
+  overflow: scroll;
+  height: 10em;
+  padding: 0.5em;
+}
+.brand,.brand:visited{
+  display: flex;
+  justify-content: center;
+  font-size: 3em;
+  padding-top: 1em;
+  font-weight: bold;
+  color: #af6623;
+}
+#level{
+  display: flex;
+  justify-content: center;
+  color: #cc7229;
+  font-size: 6em;
+  font-weight: bold;
+}
+.list{
+  display: flex;
+  justify-content: center;
 }
