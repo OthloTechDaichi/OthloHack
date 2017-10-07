@@ -2,9 +2,21 @@
 
 function createLI(val)
 {
-    const input = $("<input>").attr("type","checkbox").addClass("form-check-input");
+    const input = $("<input>").attr("type","checkbox").addClass("form-check-input").on("change", e => {
+        if(e.target.checked)
+        {
+            const t = $(e.target);
+            const form = new FormData();
+            form.append("id",t.attr("data-id"));
+            t.parent().parent().remove();
+            fetch("done", {
+                method:"POST",
+                body:form
+            })
+        }
+    });
     const label = $("<label>").addClass("form-check-label").append(input).append(val);
-    const li = $("<li>").addClass("task-item").append(label);
+    const li = $("<li>").addClass("task-item").append(label).attr("data-id",0);
     return li;
 }
 
@@ -12,25 +24,20 @@ function add(val) {
     $("#index-task").append(createLI(val));
 }
 
-const other = {
-
-}
 
 $("#add-button").on("click", () => {
     add();
-})
-
-$("#cat-body>div").on("click",e => {
-    console.log(e.target.id.substr(4));
-})
-
-
-$("#cat-body>div").on("click",e => {
-    console.log(e.target.id.substr(4));
-})
+});
 
 $("#sentaku-list .list-group-item,#soji-list .list-group-item,#buy-list .list-group-item,#other-list .list-group-item")
-    .on("click",e => {
+    .on("click", async e => {
+        const form = new FormData();
+        form.append("id",  0  );
+        const result = await fetch("add",{
+            "method": "POST",
+            body:form
+        });
         add(e.target.textContent);
+
         $(e.target.parentNode.parentNode.parentNode.parentNode.parentNode).modal("hide");
     });
