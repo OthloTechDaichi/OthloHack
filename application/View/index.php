@@ -191,8 +191,9 @@ $sql_result=$db->query("SELECT * FROM my_task_list");
 
 while( $data = $sql_result->fetchArray() )  {
 
-    print $data["id"]." : ".$data["category_id"]." : ".$data["sub_category_id"]." : ".$data["date_time"]." : ".$data["done"]."</br>";
-
+    if($data["done"] == "0") {
+        print $data["id"] . " : " . $data["category_id"] . " : " . $data["sub_category_id"] . " : " . $data["date_time"] . " : " . $data["done"] . "</br>";
+    }
 }
 
 $db->close();
