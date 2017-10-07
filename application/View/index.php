@@ -80,6 +80,11 @@
                     <li class="list-group-item">Porta ac consectetur ac</li>
                     <li class="list-group-item">Vestibulum at eros</li>
                 </ul>
+                <div class="form-group">
+                    <input type="text" name="" class="new-item" />
+                    <button type="button" class="btn btn-primary">追加</button>
+
+                </div>
             </div>
             <div class="modal-footer">
                 <button type="button" data-toggle="modal" data-target="#catlist" class="btn" data-dismiss="modal">戻る</button>
