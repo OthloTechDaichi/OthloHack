@@ -1,0 +1,50 @@
+body {
+  padding-top: 5rem; }
+
+.container {
+  text-align: center; }
+
+#level {
+  border: 1px solid #CCC;
+  border-radius: 3px;
+  height: 3em;
+  margin: .5rem; }
+
+ul.task-list {
+  text-align: left; }
+
+li.task-item {
+  list-style: none;
+  display: block;
+  padding: 0.5em 0;
+  border-bottom: 1px solid #CCC; }
+
+li.task-item label {
+  display: block; }
+
+li.task-item label input {
+  height: 1rem; }
+
+#catlist .modal-body {
+  display: flex;
+  flex-wrap: wrap; }
+
+#catlist .modal-body div {
+  width: calc( 50% - 1rem);
+  padding: .5rem;
+  margin: .5rem;
+  border: 1px solid #CCC;
+  border-radius: 3px; }
+
+#catlist .modal-body {
+  display: flex;
+  flex-wrap: wrap; }
+
+#catlist .modal-body div {
+  width: calc( 50% - 1rem);
+  padding: .5rem;
+  margin: .5rem;
+  border: 1px solid #CCC;
+  border-radius: 3px; }
+
+/*# sourceMappingURL=base.css.map */
