@@ -206,16 +206,22 @@ $db->close();
 ?>
 
 <?php
-date_default_timezone_set('Asia/Tokyo');
-$db=new SQLite3('../../db/othlotest.db');
-$date=date("Y-m-d"); //「2015-03-01」
-$stmt = $db->prepare("INSERT INTO my_task_list (category_id, sub_category_id,date_time,done) VALUES (?,?,?,'0')");
-$stmt->bindValue(1, '2', SQLITE3_INTEGER);
-$stmt->bindValue(2, '3', SQLITE3_INTEGER);
-$stmt->bindValue(3, $date, SQLITE3_TEXT);
-$stmt->bindValue(4, '0', SQLITE3_BLOB);
-$stmt->execute();
+if(isset($_POST['add'])) {
+    date_default_timezone_set('Asia/Tokyo');
+    $db = new SQLite3('../../db/othlotest.db');
+    $date = date("Y-m-d"); //「2015-03-01」
+    $stmt = $db->prepare("INSERT INTO my_task_list (category_id, sub_category_id,date_time,done) VALUES (?,?,?,'0')");
+    $stmt->bindValue(1, '2', SQLITE3_INTEGER);
+    $stmt->bindValue(2, '3', SQLITE3_INTEGER);
+    $stmt->bindValue(3, $date, SQLITE3_TEXT);
+    $stmt->bindValue(4, '0', SQLITE3_BLOB);
+    $stmt->execute();
+}
 ?>
+
+<form action="index.php" method="post">
+    <input type="submit" name="add" value="追加" />
+</form>
 
 
 </body>
