@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
           integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <link rel="stylesheet" href="../../css/base.css"/>
+    <link rel="stylesheet" href="./css/base.css"/>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 </head>
@@ -21,7 +22,8 @@
 <div class="container">
 
     <div id="level">
-        Lv.1
+        <div>Lv.1</div>
+        <div id="kusa"></div>
     </div>
     <!-- タスクの追加 -->
     <div class="list">
@@ -48,10 +50,10 @@
             </div>
             <div class="modal-body" id="cat-body">
               <div class="row">
-                  <div data-toggle="modal" data-target="#soji-list" data-dismiss="modal" id="cat-soji" class="btn col-6">掃除</div>
-                  <div data-toggle="modal" data-target="#sentaku-list" data-dismiss="modal" id="cat-sentaku" class="btn col-6">洗濯</div>
-                  <div data-toggle="modal" data-target="#buy-list" data-dismiss="modal" id="cat-buy" class="btn col-6">買い物</div>
-                  <div data-toggle="modal" data-target="#other-list" data-dismiss="modal" id="cat-other" class="btn col-6">その他</div>
+                  <button data-toggle="modal" data-target="#soji-list" data-dismiss="modal" id="cat-soji" class="btn col-6">掃除</button>
+                  <button data-toggle="modal" data-target="#sentaku-list" data-dismiss="modal" id="cat-sentaku" class="btn col-6">洗濯</button>
+                  <button data-toggle="modal" data-target="#buy-list" data-dismiss="modal" id="cat-buy" class="btn col-6">買い物</button>
+                  <button data-toggle="modal" data-target="#other-list" data-dismiss="modal" id="cat-other" class="btn col-6">その他</button>
                 </div>
             </div>
             <div class="modal-footer">
