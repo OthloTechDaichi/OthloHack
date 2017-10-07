@@ -1,0 +1,23 @@
+html, body {
+  background-color: #f7f3e8;
+  color: #3c3c3c;
+}
+.row{
+  margin: 2em auto;
+}
+html .button, body .button {
+    background-color: #ff9933;
+    color: #f7f3e8;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 1em;
+    display: flex;
+    justify-content: center;
+    border-bottom: solid 0.5em #af6623;
+    padding: 3em 0;
+}
+html .button:active, body .button:active {
+    text-decoration: none;
+    border-bottom: none;
+    margin-top: 0.5em;
+}
