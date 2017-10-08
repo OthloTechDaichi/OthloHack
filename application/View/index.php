@@ -96,11 +96,14 @@
             </div>
             <div class="modal-body">
                 <ul id="3"class="list-group">
-                    <li id="1"class="list-group-item">掃除</li>
-                    <li id="2"class="list-group-item">\Dapibus ac facilisis in</li>
-                    <li id="3"class="list-group-item">Morbi leo risus</li>
-                    <li id="4"class="list-group-item">Porta ac consectetur ac</li>
-                    <li id="5"class="list-group-item">Vestibulum at eros</li>
+                  <?php
+                  $db=new SQLite3('../../db/daich.db');
+                  $sql_result=$db->query("SELECT * FROM sub_category WHERE category_id=3");
+                  while( $data = $sql_result->fetchArray() )  {
+                    echo '<li id="'.$data['id'].'"class="list-group-item">'.$data['name'].'</li>';
+                  }
+                  $db->close();
+                  ?>
                 </ul>
                 <div class="form-group">
                     <input type="text" name="" class="new-item" />
@@ -128,11 +131,14 @@
             </div>
             <div class="modal-body">
                 <ul id="2" class="list-group">
-                    <li id="1" class="list-group-item">洗濯</li>
-                    <li id="2" class="list-group-item">Dapibus ac facilisis in</li>
-                    <li id="3" class="list-group-item">Morbi leo risus</li>
-                    <li id="4" class="list-group-item">Porta ac consectetur ac</li>
-                    <li id="5" class="list-group-item">Vestibulum at eros</li>
+                  <?php
+                  $db=new SQLite3('../../db/daich.db');
+                  $sql_result=$db->query("SELECT * FROM sub_category WHERE category_id=2");
+                  while( $data = $sql_result->fetchArray() )  {
+                    echo '<li id="'.$data['id'].'"class="list-group-item">'.$data['name'].'</li>';
+                  }
+                  $db->close();
+                  ?>
                 </ul>
             </div>
             <div class="modal-footer">
@@ -157,11 +163,14 @@
             </div>
             <div class="modal-body">
                 <ul id="4" class="list-group">
-                    <li id="1" class="list-group-item">買い物</li>
-                    <li id="2" class="list-group-item">Dapibus ac facilisis in</li>
-                    <li id="3" class="list-group-item">Morbi leo risus</li>
-                    <li id="4" class="list-group-item">Porta ac consectetur ac</li>
-                    <li id="5" class="list-group-item">Vestibulum at eros</li>
+                  <?php
+                  $db=new SQLite3('../../db/daich.db');
+                  $sql_result=$db->query("SELECT * FROM sub_category WHERE category_id=4");
+                  while( $data = $sql_result->fetchArray() )  {
+                    echo '<li id="'.$data['id'].'"class="list-group-item">'.$data['name'].'</li>';
+                  }
+                  $db->close();
+                  ?>
                 </ul>
             </div>
             <div class="modal-footer">
