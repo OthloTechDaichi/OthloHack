@@ -64,3 +64,22 @@ $("#sentaku-list .list-group-item,#soji-list .list-group-item,#buy-list .list-gr
         add(e.target.textContent,await result.text());
         $(e.target.parentNode.parentNode.parentNode.parentNode.parentNode).modal("hide");
     });
+
+$("#addSubSouzi").on("click",() =>{
+    //const category_id = e.target.parentElement.id;
+    const newItem = $("#newSubSouzi").val();
+
+    form = new FormData();
+    form.append('category_id',3);
+    form.append('newItem',newItem);
+    const result = await fetch("../Model/insert_sub_category.php",{
+        "method": "POST",
+        body:form
+    });
+
+
+    // insertTaskToDB(e);
+
+    add(e.target.textContent,await result.text());
+    $(e.target.parentNode.parentNode.parentNode.parentNode.parentNode).modal("hide");
+})

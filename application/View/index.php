@@ -114,8 +114,8 @@
                 </ul>
                 <div class="form-group">
                   <span>追加する内容を入力してください</span>
-                  <input type="text" name="" class="new-item" />
-                  <button type="button" class="btn">追加</button>
+                  <input type="text" name="newItem" class="new-item" id="newSubSouzi"/>
+                  <button type="button" class="btn" name="addSubCategory" id="addSubSouzi">追加</button>
 
                 </div>
             </div>
