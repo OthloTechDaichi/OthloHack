@@ -77,10 +77,18 @@
             </div>
             <div class="modal-body" id="cat-body">
               <div class="row">
-                  <div data-toggle="modal" data-target="#soji-list" data-dismiss="modal" id="cat-soji" class="btn col-5 cat"><img src="../../image/clean.svg">掃除</div>
-                  <div data-toggle="modal" data-target="#sentaku-list" data-dismiss="modal" id="cat-sentaku" class="btn col-5 cat"><img src="../../image/wash.svg">洗濯</div>
-                  <div data-toggle="modal" data-target="#buy-list" data-dismiss="modal" id="cat-buy" class="btn col-5 cat"><img src="../../image/shop.svg">買い物</div>
-                  <div data-toggle="modal" data-target="#other-list" data-dismiss="modal" id="cat-other" class="btn col-5 cat"><img src="../../image/other.svg">その他</div>
+                  <div data-toggle="modal" data-target="#soji-list" data-dismiss="modal" id="cat-soji" class="btn col-5 cat">
+                      <img src="../../image/clean.svg">
+                  </div>
+                  <div data-toggle="modal" data-target="#sentaku-list" data-dismiss="modal" id="cat-sentaku" class="btn col-5 cat">
+                      <img src="../../image/wash.svg">
+                  </div>
+                  <div data-toggle="modal" data-target="#buy-list" data-dismiss="modal" id="cat-buy" class="btn col-5 cat">
+                      <img src="../../image/shop.svg">
+                  </div>
+                  <div data-toggle="modal" data-target="#other-list" data-dismiss="modal" id="cat-other" class="btn col-5 cat">
+                      <img src="../../image/other.svg">
+                  </div>
               </div>
             </div>
             <div class="modal-footer">
