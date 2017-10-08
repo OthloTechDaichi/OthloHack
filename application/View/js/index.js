@@ -1,24 +1,27 @@
 
 
-function createLI(val)
+function createLI(val,id)
 {
-    const input = $("<input>").attr("type","checkbox").addClass("form-check-input").on("change", e => {
-        if(e.target.checked)
-        {
-            const t = $(e.target);
-            const form = new FormData();
-            form.append("id",t.attr("data-id"));
-            t.parent().parent().remove();
-            fetch("done", {
-                method:"POST",
-                body:form
-            })
-        }
-    });
-    const label = $("<label>").addClass("form-check-label").append(input).append(val);
-    const li = $("<li>").addClass("task-item").append(label).attr("data-id",0);
+    const input = $("<input>").attr("type","checkbox").addClass("form-check-input checkbox");
+    const label = $("<label>").addClass("form-check-label").append(input).append($("<span>").append(val).addClass("checkbox-icon"));
+    const li = $("<li>").addClass("task-item").append(label).attr("data-id",id);
     return li;
 }
+
+
+$("#index-task").on("change" , e => {
+    if(e.target.checked)
+    {
+        const t = $(e.target);
+        const form = new FormData();
+        form.append("id",t.parent().parent().attr("data-id"));
+        t.parent().parent().remove();
+        fetch("../Model/done_my_task.php", {
+            method:"POST",
+            body:form
+        })
+    }
+});
 
 // function insertTaskToDB(val){
 //   const category_id = val.target.parentElement.id;
@@ -33,8 +36,8 @@ function createLI(val)
 //            xhttpreq.send(text);
 // }
 
-function add(val) {
-    $("#index-task").append(createLI(val));
+function add(val,id) {
+    $("#index-task").append(createLI(val,id));
 }
 
 
@@ -43,20 +46,21 @@ $("#add-button").on("click", () => {
 });
 
 $("#sentaku-list .list-group-item,#soji-list .list-group-item,#buy-list .list-group-item,#other-list .list-group-item")
-    .on("click",  e => {
+    .on("click",  async e => {
         const category_id = e.target.parentElement.id;
         const sub_category_id = e.target.id;
 
         form = new FormData();
         form.append('category_id',category_id);
         form.append('sub_category_id',sub_category_id);
-        const result = fetch("../Model/insert_my_task.php",{
+        const result = await fetch("../Model/insert_my_task.php",{
             "method": "POST",
             body:form
           });
 
+
         // insertTaskToDB(e);
 
-        add(e.target.textContent);
+        add(e.target.textContent,await result.text());
         $(e.target.parentNode.parentNode.parentNode.parentNode.parentNode).modal("hide");
     });
