@@ -33,7 +33,7 @@ html .btn:active, body .btn:active {
 }
 .cat{
   margin: 0.5em;
-  padding: 3em 0;
+  padding: 1em 0;
 }
 .cat img{
   width: 100%;
@@ -56,7 +56,7 @@ html .btn:active, body .btn:active {
   display: flex;
   justify-content: center;
   font-size: 3em;
-  padding-top: 1em;
+  padding-top: 0.5em;
   font-weight: bold;
   color: #af6623;
   text-decoration: none;
