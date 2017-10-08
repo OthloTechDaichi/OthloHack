@@ -16,7 +16,7 @@
 </head>
 <body>
 
-<a class="brand" href="#">DAICHI</a>
+<a class="brand" href="#"><img src="../../image/logo.svg"></a>
 
 <div class="container">
 
