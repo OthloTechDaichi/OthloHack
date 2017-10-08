@@ -10,6 +10,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
           integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="../../css/base.css"/>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
@@ -25,12 +26,16 @@
         $db=new SQLite3('../../db/daich.db');
         $lv=$db->querySingle("SELECT COUNT(*) FROM my_task_list WHERE done = 1");
         echo '<span class="level">Lv.'.$lv.'</span>';
-        echo '<a href="http://twitter.com/share?url=[シェアするURL]&text=私は今Lv'.$lv.'だよ！&via=tmk815&related=tmk815&hashtags=DAICHI" target="_blank" class="tweet">ツイート</a>'
         ?>
+    </div>
+    <div>
+      <?php
+      echo '<a href="http://twitter.com/share?url=[シェアするURL]&text=私は今Lv'.$lv.'だよ！&via=tmk815&related=tmk815&hashtags=DAICHI" target="_blank" class="tweet"><i class="fa fa-twitter fa-fw" aria-hidden="true"></i>ツイート</a>'
+      ?>
     </div>
     <!-- タスクの追加 -->
     <div class="list">
-        <button class="btn" data-toggle="modal" data-target="#catlist">+</button>
+        <button class="btn" data-toggle="modal" data-target="#catlist">+ タスクの追加</button>
     </div>
     <!-- タスクが追加されたらここに表示 -->
     <!-- addedはタスクリストのcssのためのクラス -->
@@ -104,7 +109,7 @@
                 </ul>
                 <div class="form-group">
                     <input type="text" name="" class="new-item" />
-                    <button type="button" class="btn btn-primary">追加</button>
+                    <button type="button" class="btn">追加</button>
 
                 </div>
             </div>
