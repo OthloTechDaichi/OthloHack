@@ -20,27 +20,31 @@
 <a class="brand" href="#"><img src="../../image/logo.svg"></a>
 
 <div class="container">
+    
+    <div id="exp">
+        <div id="level">
+            <?php
+            $db=new SQLite3('../../db/daich.db');
+            $lv=$db->querySingle("SELECT COUNT(*) FROM my_task_list WHERE done = 1");
+            echo '<span class="level">Lv.'.$lv.'</span>';
+            ?>
+        </div>
+        <div id="tweet">
+          <?php
+          echo '<a href="http://twitter.com/share?url=[シェアするURL]&text=私は今Lv'.$lv.'だよ！&via=tmk815&related=tmk815&hashtags=DAICHI" target="_blank" class="tweet"><i class="fa fa-twitter fa-fw" aria-hidden="true"></i>ツイート</a>'
+          ?>
+        </div>
+    </div>
+    <div id="kusa"></div>
 
-    <div id="level">
-        <?php
-        $db=new SQLite3('../../db/daich.db');
-        $lv=$db->querySingle("SELECT COUNT(*) FROM my_task_list WHERE done = 1");
-        echo '<span class="level">Lv.'.$lv.'</span>';
-        ?>
-    </div>
-    <div>
-      <?php
-      echo '<a href="http://twitter.com/share?url=[シェアするURL]&text=私は今Lv'.$lv.'だよ！&via=tmk815&related=tmk815&hashtags=DAICHI" target="_blank" class="tweet"><i class="fa fa-twitter fa-fw" aria-hidden="true"></i>ツイート</a>'
-      ?>
-    </div>
     <!-- タスクの追加 -->
-    <div class="list">
+    <div class="list addtask">
         <button class="btn" data-toggle="modal" data-target="#catlist">+ タスクの追加</button>
     </div>
     <!-- タスクが追加されたらここに表示 -->
     <!-- addedはタスクリストのcssのためのクラス -->
-    <div class="list added">
-      <ul id="index-task" class="task-list">
+    <div class="added">
+      <ul id="index-task" class="task-list list-group"">
 
         <?php
         $db=new SQLite3('../../db/daich.db');
@@ -48,7 +52,7 @@
         while( $data = $sql_result->fetchArray() )  {
             if($data["done"] == 0) {
               $sub_category_name = $db->query("SELECT * FROM sub_category WHERE id =".$data["sub_category_id"]." AND"." category_id =".$data["category_id"])->fetchArray();
-              echo '<li class="task-item" data-id="'. htmlspecialchars($data["id"]) .'">
+              echo '<li class="task-item list-group-item" data-id="'. htmlspecialchars($data["id"]) .'">
                       <label class="form-check-label">
                         <input type="checkbox" class="form-check-input">
                           <span class="checkbox-icon">'
@@ -110,7 +114,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <ul id="3"class="list-group">
+                <ul id="3" class="list-group">
                   <?php
                   $db=new SQLite3('../../db/daich.db');
                   $sql_result=$db->query("SELECT * FROM sub_category WHERE category_id=3");
