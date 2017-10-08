@@ -21,7 +21,12 @@
 <div class="container">
 
     <div id="level">
-        Lv.1
+        <?php
+        $db=new SQLite3('../../db/daich.db');
+        $lv=$db->querySingle("SELECT COUNT(*) FROM my_task_list WHERE done = 1");
+        echo "Lv.".$lv;
+
+        ?>
     </div>
     <!-- タスクの追加 -->
     <div class="list">
