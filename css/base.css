@@ -43,7 +43,7 @@ html .btn:active, body .btn:active {
   width: 80%;
   margin: 2em auto 0;
   background-color: #FBFBFB;
-  overflow: scroll;
+  overflow: auto;
   height: 10em;
   padding: 0.5em;
 }
