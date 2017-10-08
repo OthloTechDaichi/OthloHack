@@ -50,9 +50,11 @@
               $sub_category_name = $db->query("SELECT * FROM sub_category WHERE id =".$data["sub_category_id"]." AND"." category_id =".$data["category_id"])->fetchArray();
               echo '<li class="task-item" data-id="0">
                       <label class="form-check-label">
-                        <input type="checkbox" class="form-check-input">'
-                        .$sub_category_name["name"].
-                      '</label>
+                        <input type="checkbox" class="form-check-input checkbox">
+                          <span class="checkbox-icon">'
+                          .$sub_category_name["name"].
+                          '</span>
+                      </label>
                     </li>';
             }
         }
@@ -111,8 +113,9 @@
                   ?>
                 </ul>
                 <div class="form-group">
-                    <input type="text" name="" class="new-item" />
-                    <button type="button" class="btn">追加</button>
+                  <span>追加する内容を入力してください</span>
+                  <input type="text" name="" class="new-item" />
+                  <button type="button" class="btn">追加</button>
 
                 </div>
             </div>
