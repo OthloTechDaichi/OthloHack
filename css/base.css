@@ -48,6 +48,7 @@ html .btn:active, body .btn:active {
   padding: 0.5em;
 }
 .brand,.brand:hover{
+  width: 100%;
   display: flex;
   justify-content: center;
   font-size: 3em;
@@ -101,21 +102,24 @@ html .btn:active, body .btn:active {
   padding: 0.25em 1.25em;
   margin: 0.25em 0;
 }
-/* チェックボックスのcss
-.checkbox {
+.form-check-input {
   display: none;
 }
-.checkbox + .checkbox-icon {
+.form-check-input + .checkbox-icon {
   position: relative;
   vertical-align: middle;
 }
-.checkbox + .checkbox-icon:before {
-  content: "\f372";
-  font-family: "Ionicons";
+.form-check-input + .checkbox-icon:before {
+  content: "\f096";
+  font-family: FontAwesome;
   color: #ccc;
-  font-size: 22px;
+  font-size: 1.25em;
+  margin-right: 0.15em;
 }
-.checkbox:checked + .checkbox-icon:before {
-  content: "\f374";
-  color: #17bcdf;
-}*/
+.form-check-input:checked + .checkbox-icon:before {
+  content: "\f046";
+  font-family: FontAwesome;
+  color: #ff9933;
+  margin-right: 0;
+  font-size: 1.25em;
+}

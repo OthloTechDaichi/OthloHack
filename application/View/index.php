@@ -50,7 +50,7 @@
               $sub_category_name = $db->query("SELECT * FROM sub_category WHERE id =".$data["sub_category_id"]." AND"." category_id =".$data["category_id"])->fetchArray();
               echo '<li class="task-item" data-id="0">
                       <label class="form-check-label">
-                        <input type="checkbox" class="form-check-input checkbox">
+                        <input type="checkbox" class="form-check-input">
                           <span class="checkbox-icon">'
                           .$sub_category_name["name"].
                           '</span>
