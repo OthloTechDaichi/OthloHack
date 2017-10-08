@@ -25,7 +25,7 @@
         $db=new SQLite3('../../db/daich.db');
         $lv=$db->querySingle("SELECT COUNT(*) FROM my_task_list WHERE done = 1");
         echo "Lv.".$lv;
-
+        echo '<a href="http://twitter.com/share?url=[シェアするURL]&text=私は今Lv'.$lv.'だよ！&via=tmk815&related=tmk815&hashtags=DAICHI" target="_blank">ツイート</a>'
         ?>
     </div>
     <!-- タスクの追加 -->
