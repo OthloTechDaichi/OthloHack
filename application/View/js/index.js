@@ -4,7 +4,7 @@ function createLI(val,id)
 {
     const input = $("<input>").attr("type","checkbox").addClass("form-check-input checkbox");
     const label = $("<label>").addClass("form-check-label").append(input).append($("<span>").append(val).addClass("checkbox-icon"));
-    const li = $("<li>").addClass("task-item").append(label).attr("data-id",id);
+    const li = $("<li>").addClass("task-item list-group-item").append(label).attr("data-id",id);
     return li;
 }
 
@@ -65,7 +65,7 @@ $("#sentaku-list .list-group-item,#soji-list .list-group-item,#buy-list .list-gr
         $(e.target.parentNode.parentNode.parentNode.parentNode.parentNode).modal("hide");
     });
 
-$("#addSubSouzi").on("click",() =>{
+$("#addSubSouzi").on("click",async () =>{
     //const category_id = e.target.parentElement.id;
     const newItem = $("#newSubSouzi").val();
 
@@ -109,7 +109,7 @@ function makeKusa()
     tomorrow.setSeconds(0);
     const t = tomorrow.getTime();
 
-    const d = new Date(2017,8-1,1);
+    const d = new Date(2017,4-1,1);
     const end = new Date(2017,12-1,1).getTime();
     const list = [];
     while(d.getTime() < t && d.getTime() < end )

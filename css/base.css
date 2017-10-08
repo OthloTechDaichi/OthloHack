@@ -7,8 +7,6 @@ ul{
 }
 ul li{
   list-style: none;
-  display: flex;
-  justify-content: center;
 }
 .row{
   margin: 2em 0;
@@ -44,22 +42,25 @@ html .btn:active, body .btn:active {
   justify-content: center;
 }
 .added{
-  width: 80%;
-  margin: 2em auto 0;
-  background-color: #FBFBFB;
+  width: 90%;
+  margin: 1em auto 0;
   overflow: auto;
-  height: 10em;
   padding: 0.5em;
+  justify-content:left;
 }
 .brand,.brand:hover{
   width: 100%;
   display: flex;
   justify-content: center;
   font-size: 3em;
+<<<<<<< HEAD
   padding-top: 0.5em;
+=======
+>>>>>>> fix
   font-weight: bold;
   color: #af6623;
   text-decoration: none;
+  border-bottom:1px solid #CCC;
 }
 #level{
   display: flex;
@@ -91,6 +92,7 @@ html .btn:active, body .btn:active {
 .list{
   display: flex;
   justify-content: center;
+
 }
 .form-group{
   margin: 0.5em 0;
@@ -128,6 +130,10 @@ html .btn:active, body .btn:active {
   font-size: 1.25em;
 }
 
+.form-check-label{
+  display: block;
+}
+
 #exp{
 display: flex;
 justify-content: center;
@@ -137,4 +143,45 @@ justify-content: center;
   display: flex;
   align-items: center;
   margin-left:1em;
+}
+
+
+div#kusa {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 70px;
+  margin-left: 1em;
+  width:280px;
+  margin:auto;
+}
+
+div#kusa div {
+  height: 8px;
+  width: 8px;
+  background: white;
+  margin: 1px; }
+
+div#kusa div.kusa-1 {
+  background: #ff9933;
+  opacity: 0.25; }
+
+div#kusa div.kusa-2 {
+  background: #ff9933;
+  opacity: 0.5; }
+
+div#kusa div.kusa-3 {
+  background: #ff9933;
+  opacity: 0.75; }
+
+div#kusa div.kusa-4 {
+  background: #ff9933;
+  opacity: 1; }
+
+div#kusa div.kusa-5 {
+  background: #af6623;
+  opacity: 1; }
+
+.addtask{
+  margin-top:3em;
 }
