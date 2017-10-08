@@ -20,7 +20,7 @@
 <a class="brand" href="#"><img src="../../image/logo.svg"></a>
 
 <div class="container">
-    
+
     <div id="exp">
         <div id="level">
             <?php
@@ -160,6 +160,12 @@
                   $db->close();
                   ?>
                 </ul>
+                <div class="form-group">
+                  <span>追加する内容を入力してください</span>
+                  <input type="text" name="newItem" class="new-item" id="newSubSouzi"/>
+                  <button type="button" class="btn" name="addSubCategory" id="addSubSouzi">追加</button>
+
+                </div>
             </div>
             <div class="modal-footer">
                 <button type="button" data-toggle="modal" data-target="#catlist" class="btn"
@@ -192,6 +198,12 @@
                   $db->close();
                   ?>
                 </ul>
+                <div class="form-group">
+                  <span>追加する内容を入力してください</span>
+                  <input type="text" name="newItem" class="new-item" id="newSubSouzi"/>
+                  <button type="button" class="btn" name="addSubCategory" id="addSubSouzi">追加</button>
+
+                </div>
             </div>
             <div class="modal-footer">
                 <button type="button" data-toggle="modal" data-target="#catlist" class="btn"
@@ -215,12 +227,18 @@
             </div>
             <div class="modal-body">
                 <ul id="1" class="list-group">
-                    <li id="1" class="list-group-item">その他</li>
-                    <li id="2" class="list-group-item">Dapibus ac facilisis in</li>
-                    <li id="3" class="list-group-item">Morbi leo risus</li>
-                    <li id="4" class="list-group-item">Porta ac consectetur ac</li>
-                    <li id="5" class="list-group-item">Vestibulum at eros</li>
+                    <li id="1" class="list-group-item">朝ごはんを作る</li>
+                    <li id="2" class="list-group-item">昼ごはんを作る</li>
+                    <li id="3" class="list-group-item">夕ごはんを作る</li>
+                    <li id="4" class="list-group-item">ペットにエサをやる</li>
+                    <li id="5" class="list-group-item">その他</li>
                 </ul>
+                <div class="form-group">
+                  <span>追加する内容を入力してください</span>
+                  <input type="text" name="newItem" class="new-item" id="newSubSouzi"/>
+                  <button type="button" class="btn" name="addSubCategory" id="addSubSouzi">追加</button>
+
+                </div>
             </div>
             <div class="modal-footer">
                 <button type="button" data-toggle="modal" data-target="#catlist" class="btn"
