@@ -68,7 +68,7 @@ html .btn:active, body .btn:active {
   font-weight: bold;
 }
 .level{
-  font-size: 6em;
+  font-size: 3em;
 }
 .tweet,.tweet:hover{
   display: flex;
@@ -78,7 +78,7 @@ html .btn:active, body .btn:active {
   color: white;
   border-radius: 10px;
   padding: 0.4em 0em;
-  margin: 0 auto 1em;
+  height:3em;
   width: 8em;
   border-bottom: 0.25em solid #3c7aa0;
   text-decoration: none;
@@ -126,4 +126,15 @@ html .btn:active, body .btn:active {
   color: #ff9933;
   margin-right: 0;
   font-size: 1.25em;
+}
+
+#exp{
+display: flex;
+justify-content: center;
+}
+
+#tweet {
+  display: flex;
+  align-items: center;
+  margin-left:1em;
 }

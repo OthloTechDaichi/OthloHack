@@ -21,17 +21,19 @@
 
 <div class="container">
 
-    <div id="level">
-        <?php
-        $db=new SQLite3('../../db/daich.db');
-        $lv=$db->querySingle("SELECT COUNT(*) FROM my_task_list WHERE done = 1");
-        echo '<span class="level">Lv.'.$lv.'</span>';
-        ?>
-    </div>
-    <div>
-      <?php
-      echo '<a href="http://twitter.com/share?url=[シェアするURL]&text=私は今Lv'.$lv.'だよ！&via=tmk815&related=tmk815&hashtags=DAICHI" target="_blank" class="tweet"><i class="fa fa-twitter fa-fw" aria-hidden="true"></i>ツイート</a>'
-      ?>
+    <div id="exp">
+        <div id="level">
+            <?php
+            $db=new SQLite3('../../db/daich.db');
+            $lv=$db->querySingle("SELECT COUNT(*) FROM my_task_list WHERE done = 1");
+            echo '<span class="level">Lv.'.$lv.'</span>';
+            ?>
+        </div>
+        <div id="tweet">
+          <?php
+          echo '<a href="http://twitter.com/share?url=[シェアするURL]&text=私は今Lv'.$lv.'だよ！&via=tmk815&related=tmk815&hashtags=DAICHI" target="_blank" class="tweet"><i class="fa fa-twitter fa-fw" aria-hidden="true"></i>ツイート</a>'
+          ?>
+        </div>
     </div>
     <!-- タスクの追加 -->
     <div class="list">
