@@ -15,7 +15,7 @@ $("#index-task").on("change" , e => {
         const form = new FormData();
         form.append("id",t.attr("data-id"));
         t.parent().parent().remove();
-        fetch("done", {
+        fetch("../Model/done_my_task.php", {
             method:"POST",
             body:form
         })
@@ -45,20 +45,21 @@ $("#add-button").on("click", () => {
 });
 
 $("#sentaku-list .list-group-item,#soji-list .list-group-item,#buy-list .list-group-item,#other-list .list-group-item")
-    .on("click",  e => {
+    .on("click",  async e => {
         const category_id = e.target.parentElement.id;
         const sub_category_id = e.target.id;
 
         form = new FormData();
         form.append('category_id',category_id);
         form.append('sub_category_id',sub_category_id);
-        const result = fetch("../Model/insert_my_task.php",{
+        const result = await fetch("../Model/insert_my_task.php",{
             "method": "POST",
             body:form
           });
 
+
         // insertTaskToDB(e);
 
-        add(e.target.textContent,result);
+        add(e.target.textContent,await result.text());
         $(e.target.parentNode.parentNode.parentNode.parentNode.parentNode).modal("hide");
     });

@@ -9,6 +9,6 @@ include 'ChromePhp.php';
     $stmt->bindValue(1, $category_id, SQLITE3_INTEGER);
     $stmt->bindValue(2, $sub_category_id, SQLITE3_INTEGER);
     $stmt->bindValue(3, $date, SQLITE3_TEXT);
-
+    $stmt->execute();
     echo $db->querySingle("SELECT max(id) FROM my_task_list")
 ?>
