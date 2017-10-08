@@ -18,7 +18,7 @@ html .btn, body .btn {
   color: #f7f3e8;
   font-weight: bold;
   text-decoration: none;
-  border-radius: 1em;
+  border-radius: 10px;
   display: flex;
   justify-content: center;
   border-bottom: solid 0.2em #af6623;
@@ -72,11 +72,12 @@ html .btn:active, body .btn:active {
   background-color: #55acee;
   color: white;
   border-radius: 10px;
-  padding: 0.5em 0.1em;
+  padding: 0.4em 0em;
   margin: 0 auto 1em;
   width: 8em;
   border-bottom: 0.25em solid #3c7aa0;
   text-decoration: none;
+  font-weight: bold;
 }
 .tweet:active{
   border: none;
@@ -86,3 +87,35 @@ html .btn:active, body .btn:active {
   display: flex;
   justify-content: center;
 }
+.form-group{
+  margin: 0.5em 0;
+}
+.form-group button{
+  width: 30%;
+  margin: 0 auto;
+}
+.new-item{
+  border: 1px solid #DFDFDF;
+  width: 100%;
+  border-radius: 3px;
+  padding: 0.25em 1.25em;
+  margin: 0.25em 0;
+}
+/* チェックボックスのcss
+.checkbox {
+  display: none;
+}
+.checkbox + .checkbox-icon {
+  position: relative;
+  vertical-align: middle;
+}
+.checkbox + .checkbox-icon:before {
+  content: "\f372";
+  font-family: "Ionicons";
+  color: #ccc;
+  font-size: 22px;
+}
+.checkbox:checked + .checkbox-icon:before {
+  content: "\f374";
+  color: #17bcdf;
+}*/
