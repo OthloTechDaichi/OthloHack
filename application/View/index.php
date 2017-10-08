@@ -48,7 +48,7 @@
         while( $data = $sql_result->fetchArray() )  {
             if($data["done"] == 0) {
               $sub_category_name = $db->query("SELECT * FROM sub_category WHERE id =".$data["sub_category_id"]." AND"." category_id =".$data["category_id"])->fetchArray();
-              echo '<li class="task-item" data-id="0" data-id="'. htmlspecialchars($sub_category_name["id"]) .'>
+              echo '<li class="task-item" data-id="0" data-id="'. htmlspecialchars($sub_category_name["id"]) .'">
                       <label class="form-check-label">
                         <input type="checkbox" class="form-check-input checkbox">
                           <span class="checkbox-icon">'

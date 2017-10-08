@@ -2,18 +2,19 @@
 
 function createLI(val,id)
 {
-    const input = $("<input>").attr("type","checkbox").addClass("form-check-input").attr("data-id",id);
-    const label = $("<label>").addClass("form-check-label").append(input).append(val);
-    const li = $("<li>").addClass("task-item").append(label);
+    const input = $("<input>").attr("type","checkbox").addClass("form-check-input checkbox");
+    const label = $("<label>").addClass("form-check-label").append(input).append($("<span>").append(val).addClass("checkbox-icon"));
+    const li = $("<li>").addClass("task-item").append(label).attr("data-id",id);
     return li;
 }
+
 
 $("#index-task").on("change" , e => {
     if(e.target.checked)
     {
         const t = $(e.target);
         const form = new FormData();
-        form.append("id",t.attr("data-id"));
+        form.append("id",t.parent().parent().attr("data-id"));
         t.parent().parent().remove();
         fetch("../Model/done_my_task.php", {
             method:"POST",
