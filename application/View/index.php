@@ -90,7 +90,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <ul class="list-group">
+                <ul id="3"class="list-group">
                     <li id="1"class="list-group-item">掃除</li>
                     <li id="2"class="list-group-item">\Dapibus ac facilisis in</li>
                     <li id="3"class="list-group-item">Morbi leo risus</li>
@@ -122,7 +122,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <ul class="list-group">
+                <ul id="2" class="list-group">
                     <li id="1" class="list-group-item">洗濯</li>
                     <li id="2" class="list-group-item">Dapibus ac facilisis in</li>
                     <li id="3" class="list-group-item">Morbi leo risus</li>
@@ -151,7 +151,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <ul class="list-group">
+                <ul id="4" class="list-group">
                     <li id="1" class="list-group-item">買い物</li>
                     <li id="2" class="list-group-item">Dapibus ac facilisis in</li>
                     <li id="3" class="list-group-item">Morbi leo risus</li>
@@ -180,7 +180,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <ul class="list-group">
+                <ul id="1" class="list-group">
                     <li id="1" class="list-group-item">その他</li>
                     <li id="2" class="list-group-item">Dapibus ac facilisis in</li>
                     <li id="3" class="list-group-item">Morbi leo risus</li>
@@ -214,23 +214,6 @@
 
 
 
-<!-- <?php
-if(isset($_POST['add'])) {
-    date_default_timezone_set('Asia/Tokyo');
-    $db = new SQLite3('../../db/othlotest.db');
-    $date = date("Y-m-d"); //「2015-03-01」
-    $stmt = $db->prepare("INSERT INTO my_task_list (category_id, sub_category_id,date_time,done) VALUES (?,?,?,'0')");
-    $stmt->bindValue(1, '2', SQLITE3_INTEGER);
-    $stmt->bindValue(2, '3', SQLITE3_INTEGER);
-    $stmt->bindValue(3, $date, SQLITE3_TEXT);
-    $stmt->bindValue(4, '0', SQLITE3_BLOB);
-    $stmt->execute();
-}
-?>
-
-<form action="index.php" method="post">
-    <input type="submit" name="add" value="追加" />
-</form> -->
 
 
 </body>
